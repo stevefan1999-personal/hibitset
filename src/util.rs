@@ -8,6 +8,7 @@ const fn base_2_log<const N: usize>() -> usize {
     match N {
         32 => 5,
         64 => 6,
+        128 => 7,
         _ => unimplemented!(),
     }
 }
@@ -97,6 +98,7 @@ macro_rules! from_primitive_uint {
 }
 
 from_primitive_uint!(usize);
+from_primitive_uint!(u128);
 from_primitive_uint!(u64);
 from_primitive_uint!(u32);
 
